@@ -1,0 +1,67 @@
+<!---
+Write a C program to print all Armstrong numbers between 1 to n.
+---->
+
+<! Doctype html>
+<head>
+    <title>Print Aramstrong Number</title>
+    <script type="text/javascript">
+    
+
+
+    let a=prompt("Enter the Limit");
+    let limit=parseInt(a);
+
+let no=1;
+
+while(no<=limit)
+{
+    let temp=no;
+    let count=0;
+
+    while(no>0)
+    {
+        no=Math.floor(no/10);
+        count++;
+    }
+
+   
+
+    no=temp;
+    let sum=0;
+    let rem;
+    
+    while(no>0)
+    {
+        rem=no%10;
+        no=Math.floor(no/10);
+        let pow=1;
+
+        for(let i=1;i<=count;i++)
+        {
+           pow=pow*rem;
+        }
+
+        sum=sum+pow
+
+    }
+
+
+
+    if(temp==sum)
+    {
+       document.write(temp+"<br>");
+    }
+   
+    sum=0;
+
+    no++;
+}
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

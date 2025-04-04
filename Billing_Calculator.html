@@ -1,0 +1,98 @@
+<!-----
+WAP Program to design billing Calculator using javascript
+ task:you have to design web page with five textboxes
+ 1:first textbox for input quentity
+ 2:secound textbox for input rate
+ 3: third for calculate bill  without gst show in third texbox  when user input rate 
+in second textbox
+4:fourth textbox help us to calculate the gst and display in fourth textbox 
+5:fifth textbox show the bill with gst 
+--->
+
+<!DOCTYPE html>
+<head>
+    <title>Billing Calculator JavaScript</title>
+    <script type="text/javascript">
+        function calbill() 
+        {
+           
+            let quantity = document.getElementById("quantity").value;  // Get quantity and rate values
+            let rate = document.getElementById("ratee").value;
+        
+            
+            // Calculate the bill without GST
+            let billWithoutGST = parseFloat(quantity) * parseFloat(rate);
+            
+            // Display the bill without GST
+            document.getElementById("bill").value = billWithoutGST;
+            
+            // Calculate the GST (assuming GST rate is 18%)
+            let gst = billWithoutGST * 0.18;
+            
+            // Display the GST amount
+            document.getElementById("gst").value = gst;
+            
+            // Calculate the total bill including GST
+            let totalBill = billWithoutGST + gst;
+            
+            // Display the total bill with GST
+            document.getElementById("total").value = totalBill;
+        }
+
+    </script>
+
+    <style>
+        body
+         {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .mid 
+        {
+            width: 500px;
+            padding: 20px;
+            background-color: azure;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input 
+        {
+            width: 100%;
+            height: 30px;
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"] 
+        {
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="button"] 
+        {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mid">
+    <h2>Billing Calculator</h2>
+    <input type="number" id="quantity" placeholder="Enter Quantity" oninput="calbill()" />
+    <input type="number" id="ratee" placeholder="Enter Rate" oninput="calbill()" /><br>
+    <input type="text" id="bill" placeholder="Bill without GST"/><br>
+    <input type="text" id="gst" placeholder="GST Amount" /><br>
+    <input type="text" id="total" placeholder="Total Bill with GST" />
+</div>
+
+</body>
+</html>

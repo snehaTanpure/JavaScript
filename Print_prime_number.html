@@ -1,0 +1,40 @@
+
+
+<!Doctype html>
+<head>
+<title>Print prime Number</title>
+<script type="text/javascript">
+
+let a=prompt("Enter the Number:");
+let limit=parseInt(a);
+
+let no=2;
+
+while(no<=limit)
+{
+
+let count=0;
+
+for(let i=2;i<=no/2;i++)
+{
+  if(no%i==0)
+  {
+    count ++;
+  }
+}
+
+if(count==0)
+{
+document.write(no);
+}
+
+
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+

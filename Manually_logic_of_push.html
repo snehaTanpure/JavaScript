@@ -1,0 +1,61 @@
+<!---
+push(): this  method helps us add new data in an array at program run time.
+Input : 1 2 3 4 5
+add element: 7
+output: 1 2 3 4 5 7 
+---->
+
+<!doctype html>
+<head>
+    <title>Push logic</title>
+
+    <script type="text/javascript">
+
+let a=[];
+    let input=true;
+
+    let i=0;
+    
+
+    document.write("first Array is:");
+    while(input)
+    {
+        let inputdata=prompt(" Enter the input to the Array if u want stop then enter stop ");
+        
+        if(inputdata==="stop")
+        {
+            input=false;
+        }
+        else
+        {
+            a.push(Number(inputdata));
+        }
+    }
+
+    document.write(a);
+
+
+    let size=a.length;
+    
+
+    
+    let add=prompt("enter the add element");
+
+    
+    let add1=parseInt(add);
+    a[a.length]=add1;
+
+
+   document.write("<br> Updated Array after adding the new element: " + a);
+
+   
+    
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

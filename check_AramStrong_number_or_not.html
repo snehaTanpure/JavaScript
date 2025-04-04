@@ -1,0 +1,64 @@
+<!--
+Write a C program to check whether a number is Armstrong n
+--->
+
+
+<!Doctype html>
+<head>
+    <title>AramStrong Number check</title>
+    <script type="text/javascript">
+     
+     let a=prompt("Enter the Number");
+     let num=parseInt(a);
+
+     let temp=num;
+     let count=0;
+
+     while(num>0)
+     {
+        num=Math.floor(num/10);
+        count++;
+     }
+
+     
+     num=temp;
+     let sum=0;
+     let rem;
+     
+
+     while(num>0)
+     {
+            rem=num%10;
+            num=Math.floor(num/10);
+            let pow=1;           
+
+        for(let i=1;i<=count;i++)
+        {
+           pow=pow*rem;
+        }
+
+        sum=sum+pow;
+
+    }
+
+    document.write("Sum of Power is ",sum); 
+
+ 
+     if(temp==sum)
+     {
+        document.write("<br> Number is AramStrong");
+     }
+     else
+     {
+        document.write("<br> Number is not AramStrong");
+     }
+
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

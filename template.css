@@ -1,0 +1,372 @@
+*
+{
+ padding:0;
+ margin:0;
+ box-sizing:border-box;
+}
+
+.container
+{
+	height:3000px;
+	width:100%;
+}
+
+
+.menu
+{
+	height:100px;
+	width:100%;
+// background-color:grey;
+    display:flex;
+	justify-content:space-around;
+}
+
+
+.menu ul
+{
+	margin-top:30px;
+}
+
+.menu ul li
+{
+	display:inline;
+	padding:20px;
+	font-size:20px;
+}
+
+.menu ul li a
+{
+	text-decoration:none;
+}
+
+
+.first
+{
+	width:100%;
+	height:600px;
+	background-color:pink;
+	background-image:url("test4.webp");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+}
+
+.fir1
+{
+	width:500px;
+	height:300px;
+	// background-color:red;	
+	color:white;
+}
+
+.fir1 h1
+{
+	font-size:40px;
+}
+
+.fir1 Button
+{
+	border:none;
+    width:150px;
+	height:50px;
+}
+
+.fir1 button a
+{
+	text-decoration:none;
+}
+
+.but1
+{
+	background-color:skyblue;
+}
+
+.second
+{
+	width:100%;
+	height:450px;
+	// background-color:pink;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	box-shadow:0 0 10px rgba(0,0,0,2);
+}
+
+.sec1
+{
+	width:400px;
+	height:380px;
+	// background-color:grey;	
+}
+
+.sec1 Button
+{
+	border:none;
+    width:150px;
+	height:50px;
+	background-color:skyblue;
+	border-radius:5px;
+}
+
+.sec1 button a
+{
+	text-decoration:none;
+}
+
+.sec2
+{
+	width:400px;
+	height:380px;
+	background-color:white;
+    background-image:url("gir4.webp");
+	background-size:100% 100%;
+	//background-repeat:no-repeat;
+}
+
+
+.three
+{
+	width:100%;
+	height:500px;
+	// background-color:grey;	
+	//background-image:url("gir4.webp");
+	//background-size:100% 100%;
+}
+
+
+.heading h1
+{
+	text-align:center;
+}
+
+.heading p
+{
+	text-align:center;
+}
+
+.three2
+{
+	display:flex;
+	justify-content:center;
+	
+}
+
+.thr1
+{
+	width:350px;
+	height:300px;
+	margin-left:20px;
+	background-image:url("girls2.jpeg");
+	background-size:100% 100%;
+	box-shadow:0 0 10px rgba(0,0,0,2);
+}
+
+.thr2
+{
+	width:350px;
+	height:300px;
+	margin-left:20px;
+	background-image:url("girs3.jpeg");
+	background-size:100% 100%;
+	box-shadow:0 0 10px rgba(0,0,0,2);
+}
+
+.thr3
+{
+	width:350px;
+	height:300px;
+   
+	margin-left:20px;
+	background-image:url("girls2.jpeg");
+	background-size:100% 100%;
+	box-shadow:0 0 10px rgba(0,0,0,2);
+
+}
+
+.four
+{
+	width:100%;
+	height:600px;
+    background-color:lightpink;	
+}
+
+.head h1
+{
+	text-align:center;
+}
+
+.head p
+{
+	text-align:center;
+}
+
+.four2
+{
+	display:flex;
+	justify-content:center;
+	text-align:center;
+}
+
+.for1
+{
+	width:350px;
+	height:350px;
+    background-color:white;
+	
+}
+
+.for2
+{
+	width:350px;
+	height:350px;
+    background-color:white;
+	margin-left:20px;
+}
+
+.for3
+{
+	width:350px;
+	height:350px;
+    background-color:white;
+	margin-left:20px;
+}
+
+.four2 Button
+{
+	width:150px;
+	height:150px;
+	border-radius:100px; // 100px 0 100px;
+	border:none;
+	background-color:skyblue;
+}
+
+.forbut
+{
+text-align:center;	
+
+}
+.forbut Button
+{
+	border:none;
+    width:150px;
+	height:50px;
+	background-color:black;
+	border-radius:5px;
+	
+	
+}
+
+.forbut button a
+{
+	text-decoration:none;
+	color:white;
+}
+
+
+.five
+{
+	width:100%;
+	height:500px;
+	background-color:lightgrey;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+
+.headfive h1
+{
+	text-align:center;
+}
+
+.headfive p
+{
+	text-align:center;
+}
+
+.five1
+{
+	
+	width:600px;
+	height:300px;
+	background-color:white;
+	box-shadow:0 0 10px rgba(255,255,255,2);
+}
+
+.five1 h3
+{
+	font-style:italic;
+	text-align:center;
+}
+
+.five1 p
+{
+	color:blue;
+	text-align:center;
+	margin-top:20px;
+}
+
+.six
+{
+	
+	width:100%;
+	height:300px;
+	// background-color:pink;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.six2
+{
+	width:700px;
+	height:200px;
+	// background-color:white;
+	text-align:center;
+	
+}
+
+.six2 Button
+{
+	width:150px;
+	height:50px;
+	background-color:skyblue;
+	border:none;
+	border-radius:50px;
+	margin-top:50px;
+}
+
+.six2 Button a
+{
+	text-decoration:none;
+	color:white;
+}
+
+.footer
+{
+	width:100%;
+	height:250px;
+	background-color:black;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	box-shadow:0 0 10px rgba(255,255,255,2);
+}
+
+.foot1
+{
+  width:250px;
+  height:200px;
+  margin-left:20px;
+}
+
+.foot2
+{
+  width:150px;
+  height:200px;
+  margin-left:20px;
+}

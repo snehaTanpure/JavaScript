@@ -1,0 +1,62 @@
+<!---
+Find the first non-repeated element in an array.
+---->
+
+<!doctype html>
+<head>
+
+</head>
+<body>
+
+
+
+</body>
+
+<script type="text/javascript">
+   
+   let a=[];
+   let input =true;
+    
+   while(input)
+   {
+      let inputdata=prompt("Enter the Elment");
+
+      if(inputdata=="stop")
+      {
+         input=false;
+      }
+      else
+      {
+        a.push(Number(inputdata));
+      }
+
+   }
+
+   document.write(a);
+
+
+
+   document.write("<br> first non-repeated element in an array");
+
+   for(let i=0;i<a.length;i++)
+   {
+        let count=0;
+
+    for(let j=0;j<a.length;j++)
+      {
+         if(a[i]==a[j])
+         {
+            count++;
+         }
+      }
+
+      if(count == 1)
+      {
+        document.write("<br>"+a[i]);
+        break;
+      }
+
+   }
+    
+</script>
+</html>

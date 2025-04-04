@@ -1,0 +1,53 @@
+<!---
+Write a C program to print all Strong numbers between 1 to n.
+--->
+
+<!Doctype html>
+<head>
+    <titlte> Print Strong number 1 to n</titlte>
+    <script type="text/javascript">
+        let a=prompt("enter the Limit");
+        let limit=parseInt(a);
+
+    let n=1;
+    while(n<=limit)
+    {
+      
+       while(n>0)
+       {
+
+        rem=n%10;
+        n=Math.floor(n/10);
+
+        let fact=1;
+        let sum=0;
+     
+      for(let i=1;i<=rem;i++)
+       {
+         fact=fact*i;
+       }
+        sum=sum+fact;
+
+      
+      if(n==sum)
+       {
+        document.write(n);
+       }
+
+       }
+     
+
+        n++;
+    }    
+    
+ 
+    
+</script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>

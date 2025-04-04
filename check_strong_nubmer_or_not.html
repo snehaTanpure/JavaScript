@@ -1,0 +1,51 @@
+<!-----
+Write a C program to check whether a number is Strong number or not.
+---->
+
+<!Doctype html>
+<head>
+    <title> check String number or not</title>
+    <script type="text/javascript">
+
+    let a=prompt("enter the number");
+    let num=parseInt(a);
+
+let rem=0;
+let temp=num;
+let sum=0;
+
+   
+    while(num>0)
+    {
+        rem=num%10;
+        num=Math.floor(num/10);
+      
+        let fact=1;
+
+        for(let i=1;i<=rem;i++)
+        {
+         fact=fact*i;
+        }
+          sum=sum+fact;
+    }
+
+    document.write("Sum of factorial is:",sum)
+
+    if(temp==sum)
+    {
+        document.write("<br> Strong number");
+    }
+    else
+    {
+        document.write(" <br> ! Not Strong number");
+    }
+
+
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!---
+Find the union of two arrays.
+---->
+
+
+<!doctype html>
+<head>
+    <title> Find the union two Array </title>
+    <script type="text/javascript">
+
+   
+
+    let a=[];
+    let input=true;
+
+    document.write("first Array is:");
+    while(input)
+    {
+        let inputdata=prompt(" Enter the input to the Array if u want stop then enter stop ");
+        
+        if(inputdata==="stop")
+        {
+            input=false;
+        }
+        else
+        {
+            a.push(Number(inputdata));
+        }
+    }
+
+    document.write(a);
+
+
+    let b=[];
+
+    let input2=true;
+    document.write(" <br> Secound Array is:");
+    while(input2)
+    {
+        let inputdata=prompt(" Enter the input to the Array if u want stop then enter stop ");
+        
+        if(inputdata==="stop")
+        {
+            input2=false;
+        }
+        else
+        {
+            b.push(Number(inputdata));
+        }
+    }
+
+    document.write(b);
+
+
+
+
+   let c=[];
+   let k=0;
+
+   document.write(" <br> After merge Two Array:");
+   for(let i=0;i<a.length;i++)
+   {
+     c[k]=a[i];
+     k++;
+   }
+
+   for(let i=0;i<b.length;i++)
+   {
+      c[k]=b[i];
+      k++;
+   }
+
+   document.write(c);
+
+
+
+   document.write(" <br> Find Union Array:");
+   
+   let d = []; 
+         
+        
+        for (let i = 0; i < c.length; i++) 
+        {
+            let isDuplicate = false;
+            for (let j = 0; j < d.length; j++)
+             {
+                if (c[i] === d[j]) { 
+                    isDuplicate = true;
+                    break; 
+                }
+            }
+            if (!isDuplicate) 
+            {
+                d.push(c[i]); 
+            }
+        }
+
+        
+       
+
+        for(let i=0 ; i<d.length ; i++)
+        {
+            for(let j=i+1 ; j<d.length ; j++)
+           {
+            if(d[i]>d[j])
+                {
+                   let temp=d[i];
+                    d[i]=d[j];
+                    d[j]=temp;
+                }
+           }
+        }
+        
+        for(let i=0 ; i<d.length ; i++)
+        {
+            document.write(" "+d[i]);
+        }
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

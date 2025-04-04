@@ -1,0 +1,52 @@
+<!---
+at(index): this method returns data from array using specified index and if index not found return undefined.
+--->
+
+
+
+<!doctype html>
+<head>
+    <title>at(index) logic</title>
+    <script type="text/javascript">
+
+let a=[];
+    let input=true;
+
+    document.write("first Array is:");
+    while(input)
+    {
+        let inputdata=prompt(" Enter the input to the Array if u want stop then enter stop ");
+        
+        if(inputdata==="stop")
+        {
+            input=false;
+        }
+        else
+        {
+            a.push(Number(inputdata));
+        }
+    }
+
+    document.write(a);
+
+
+    let index=prompt("enter the index");
+    document.write("<br> specific index value:");
+    let ind=parseInt(index);
+
+    for(let i=0;i<a.length;i++)
+    {
+        if(i==ind)
+       {
+        document.write(a[i]);
+       }
+    }
+
+
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>

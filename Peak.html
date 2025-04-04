@@ -1,0 +1,52 @@
+<!---
+Find the peak element in an array.
+Input : 1 2 0 3 4 2 9
+output : 0 2
+--->
+
+
+<!doctype html>
+<head>
+    <title>Peak Element Find </title>
+ <script type="text/javascript">
+
+ let a=[];
+
+ let input= true;
+
+ while(input)
+ {
+
+    let inputdata=prompt(" Enter the input to the Array if u want stop then enter stop" );
+
+        if(inputdata==="stop")
+        {
+              input=false;
+        }
+          else
+        {
+            a.push(Number(inputdata));
+        }
+
+ }
+
+ document.write(a);
+
+
+ document.write("<br> Peak Element is:");
+
+ for(let i=0;i<a.length;i++)
+ {
+      if(a[i-1] >a[i] && a[i+1] > a[i])
+      {
+          document.write("<br>"+a[i]);
+      }
+ }
+
+ </script>
+ 
+</head>
+<body>
+
+</body>
+</html>

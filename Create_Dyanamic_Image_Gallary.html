@@ -1,0 +1,104 @@
+<!----
+2. Create a Dynamic Image Gallery
+Objective: Build an image gallery that can dynamically add and remove images.
+Output Screen: Displays images and buttons to add new ones. Each image has a delete button.
+
+
+Key Concepts: DOM manipulation, creating and removing elements.
+--->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Dynamic Image Gallery</title>
+    <script type="text/javascript">
+
+        function dyimage() 
+        {
+            document.getElementById("c").innerHtml="";
+
+            // Create a new table and append it to the body
+
+            let mytable = document.createElement("table");
+            mytable.style.border = "1px solid black";      // Style for the table border
+
+            let arr = ["girls2.jpeg"];       // Array with images to be added
+
+            // Loop to create rows and columns for images
+
+            for (let i = 0; i < 2 ; i++) 
+            {
+                let row = document.createElement("tr"); // Create a new row for each iteration
+
+                for (let j = 0; j < 5; j++) 
+                {
+                    let column = document.createElement("td"); // Create a new column (cell)
+
+                    // Create an image element
+                    let backimg = document.createElement("img");
+                    backimg.setAttribute("src", "girls2.jpeg"); // Set the image source
+                    backimg.setAttribute("width", "200px"); // Set width of the image
+                    backimg.setAttribute("height", "200px"); // Set height of the image
+
+                 // Create a delete button for each image
+
+                  let deleteBtn = document.createElement("button");
+                  deleteBtn.textContent = "Delete";
+                  deleteBtn.onclick = function()
+                 {
+                     column.remove(); // Remove the column containing the image and the button
+                 }
+
+                    // Append the image and delete button to the column
+                    column.appendChild(backimg);
+                    column.appendChild(deleteBtn);
+
+                    // Append the column to the row
+                    row.appendChild(column);
+                }
+
+                // Append the row to the table
+                mytable.appendChild(row);
+            }
+
+            // Append the table to the container with id 'c'
+            document.getElementById("c").appendChild(mytable);
+        }
+    </script>
+    <style>
+
+        input
+        {
+            width: 400px;
+            height: 40px;
+            background-color: blueviolet;
+            color:aliceblue;
+            border-radius: 5px ;
+        }
+        button 
+        {
+            margin-top:10px;
+            cursor: pointer;
+        }
+
+        body
+        {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="c">
+        <input type="button" value="Click to Add Images" onClick="dyimage()" />
+    </div>
+</body>
+</html>
+
+

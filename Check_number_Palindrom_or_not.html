@@ -1,0 +1,41 @@
+<!-----Write a C program to check whether a number is palindrome or not----->
+
+<!Doctype html>
+<head>
+<title>Check palindrom or not </title>
+<script type="text/javascript">
+
+let a=prompt("Enter the number:");
+let num=parseInt(a);
+
+let rem=0;
+let rev=0;
+let temp=num;
+
+while(num>0)
+{
+
+rem=num%10;
+num=Math.floor(num/10);
+rev=rev*10+rem;
+
+}
+
+console.log("After number reverse is:"+rev);
+
+if(temp==rev)
+{
+document.write("Number is palindrom");
+}
+else
+{
+document.write("Number is Not palindrom");
+}
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

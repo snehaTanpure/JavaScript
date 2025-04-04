@@ -1,0 +1,91 @@
+<!-- Email validation --->
+
+
+<!doctype html>
+<head>
+    <title>Email validation</title>
+
+    <script type="text/javascript"> 
+
+     function EmailValidation(str)
+    {
+         let spanEle=document.getElementById("s");  // fetch id of span
+         let index=str.indexOf("@");               // fetch the index of @ symbol
+         let index1=str.lastIndexOf("@");
+
+        if(index<=0 || index1!=index)                  // check @ syambol more than once if @ symbol more time then print inavlid msg
+        {
+            spanEle.innerHTML="invalid Email";
+            spanEle.color="red";
+        }
+        else
+        {
+            let s="@";
+           
+            let strData=str.substring(index);   // substring method is used for fetch data from specific index
+            index=strData.indexOf(".");         // find the . symbol index and store in index
+            if(index==(strData.length-4) || index==(strData.length-3))   //check . are present in valid index
+            {
+                spanEle.innerHTML="";
+                spanEle.style.color="red";
+
+            }
+                                  
+            let flag=false;
+
+            for(let i=0;i<str.length;i++)
+            {
+               
+                let ascii=str.charCodeAt(i);
+
+                if( !( ascii>=48 && ascii<=57 || ascii>=65 && ascii<=90 || ascii>=97 && ascii<=122  || ascii==64 || ascii==46 || ascii==95) )
+               {
+                 flag=true;
+                 break;
+               }
+               
+               if(ascii>=65 && ascii<=90)
+				{
+                     flag=true;
+					 break;
+			   }
+
+
+            }
+
+
+            if(flag)
+            {
+                spanEle.innerHTML="invalid Email";
+                spanEle.style.color="red";
+            }
+            else
+            {
+                spanEle.innerHTML="";
+                spanEle.style.color="red";
+                
+            }
+
+        }
+        
+
+     }
+    
+
+
+    </script>
+
+
+    
+</head>
+
+
+<body>
+
+
+    <input type="text" name="name" value=" " style="width:400px;height:40px" onkeyup="EmailValidation(this.value)"/><br><br>
+    <span id="s"> </span>
+
+
+</body>
+</html>

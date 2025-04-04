@@ -1,0 +1,44 @@
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+ }
+ 
+ .container
+ {
+	 width:100%;
+	 height:2000px;
+	 background-color:lightblue;
+ }
+ 
+ 
+ .header
+ {
+ 
+     width:100%;
+	 height:70px;
+	 background-color:yellow;
+	 display:flex;
+	 justify-content:space-between;
+ }
+
+.para
+{
+margin:20px;
+}
+
+
+.header2
+{
+ display:flex;
+ justify-content:space-between;
+  width:100%;
+  height:70px;
+}
+
+.menu ul li
+{
+display:inline;
+}

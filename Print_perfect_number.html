@@ -1,0 +1,49 @@
+<!----
+Write a C program to print all Perfect numbers between 1 to n.
+--->
+
+<! Doctype html>
+<head>
+    <title>Print Perfect Number</title>
+    <script type="text/javascript">
+
+    let a=prompt("Enter the limi");
+    let limit=parseInt(a);
+
+    let i;
+
+    let n=1;
+    while(n<=limit)
+    {
+        let sum=0;
+
+    for(i=1;i<=n/2;i++)
+       {
+          if(n%i==0)     
+          {
+            sum=sum+i;
+          } 
+       }
+  
+
+
+       if(sum==n)
+       {
+        document.write(n+"<br>");
+       }
+
+
+
+        n++;
+    }
+
+
+
+    </script>
+</head>
+<body>
+
+
+
+</body>
+</html>

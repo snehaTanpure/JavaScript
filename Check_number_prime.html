@@ -1,0 +1,37 @@
+
+
+<!Doctype html>
+<head>
+<title>Check Number prime or not </title>
+<script type="text/javascript">
+
+let a=prompt("Enter the Number:");
+let num=parseInt(a);
+
+let count=0;
+
+for(let i=2;i<=num/2;i++)
+{
+  if(num%i==0)
+  {
+    count ++;
+  }
+}
+
+
+if(count==0)
+{
+console.log("Number is prime");
+}
+else
+{
+console.log("Number is Not prime");
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
+

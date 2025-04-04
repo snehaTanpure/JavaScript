@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    <title>Simple Calculator</title>
+    <script type="text/javascript">
+
+        function mathOperation(operation)
+         {
+            let num1 = parseFloat(document.getElementById("first").value);
+            let num2 = parseFloat(document.getElementById("second").value);
+            let result;
+
+            switch (operation)
+             {
+                case 'ADD':
+                    result = num1 + num2;
+                    break;
+                case 'SUB':
+                    result = num1 - num2;
+                    break;
+                case 'MUL':
+                    result = num1 * num2;
+                    break;
+                case 'DIV':
+                    if (num2 !== 0) 
+                    {
+                        result = num1 / num2;
+                    } 
+                    else 
+                    {
+                        result = "Error: Division by zero";
+                    }
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            document.getElementById("Answer").value = result;
+        }
+    </script>
+    <style>
+        input[type="text"] 
+        {
+            width: 100px;
+            height: 30px;
+            margin: 5px;
+        }
+        input[type="button"]
+         {
+            height: 50px;
+            width:100px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <input type="text" id="first" placeholder="Enter first number" /><br>
+    <input type="text" id="second" placeholder="Enter second number" /><br>
+    <input type="text" id="Answer" placeholder="Result" readonly /><br>
+    
+    <input type="button" value="ADD" onclick="mathOperation('ADD')" />
+    <input type="button" value="SUB" onclick="mathOperation('SUB')" />
+    <input type="button" value="MUL" onclick="mathOperation('MUL')" />
+    <input type="button" value="DIV" onclick="mathOperation('DIV')" />
+
+</body>
+</html>

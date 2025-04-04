@@ -1,0 +1,44 @@
+<!-----
+Write a C program to check whether a number is Perfect number or not.--->
+
+
+<! Doctype html>
+<head>
+    <title>check perfect number or not</title>
+    <script type="text/javascript">
+
+    let a=prompt("Enter the Number");
+    let num=parseInt(a);
+
+     let sum=0;
+
+    for(let i=1;i<=num/2;i++)
+    {
+        if(num%i==0)
+        {
+            sum=sum+i;
+        }
+
+    }
+
+    document.write("Sum is:",sum);
+
+
+    if(sum==num)
+    {
+        document.write("<br> Number is perfect");
+    }
+    else
+    {
+        document.write("<br> Number is Not perfect");
+    }
+
+    </script>
+</head>
+<body>
+
+
+
+
+</body>
+</html>
